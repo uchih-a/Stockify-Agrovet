@@ -32,7 +32,7 @@ const startServer = async () => {
     logger.info('✅ MongoDB connected successfully');
 
     const server = app.listen(PORT, () => {
-      logger.info(`✅ Server running on http://localhost:${PORT} in ${process.env.NODE_ENV} mode`);
+      logger.info(`🚀 Server running on port ${PORT} in ${process.env.NODE_ENV || 'production'} mode`);
     });
 
     startStockAlertJob();
